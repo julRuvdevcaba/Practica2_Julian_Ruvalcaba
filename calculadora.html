@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Web Inteligente</title>
+    <!-- Enlace al archivo css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Calculadora Web Inteligente</h1>
+    <p>Menú:</p>
+
+    <!-- Menú con tres botones que muestran cada sección -->
+    <div>
+        <button onclick="mostrarSeccion('triangulo')">Área del Triángulo</button>
+        <button onclick="mostrarSeccion('esfera')">Volumen de la Esfera</button>
+        <button onclick="mostrarSeccion('divisas')">Conversión de Divisas</button>
+    </div>
+
+    <hr>
+
+    <!-- 1.- Cálculo del Área de un Triángulo -->
+    <div id="seccion-triangulo" class="seccion">
+        <h2>Área del Triángulo</h2>
+
+        <label for="base">Base del triángulo:</label>
+        <input type="number" id="base" placeholder="Ej: 10">
+
+        <label for="altura">Altura del triángulo:</label>
+        <input type="number" id="altura" placeholder="Ej: 5">
+
+        <div class="botones">
+            <button onclick="calcularTriangulo()">Calcular</button>
+            <button onclick="limpiar('triangulo')">Limpiar</button>
+        </div>
+
+        <p id="resultado-triangulo" class="resultado"></p>
+    </div>
+
+    <!-- 2.- Cálculo del Volumen de una Esfera -->
+    <div id="seccion-esfera" class="seccion" style="display:none;">
+        <h2>Volumen de la Esfera</h2>
+
+        <label for="radio">Radio de la esfera:</label>
+        <input type="number" id="radio" placeholder="Ej: 7">
+
+        <div class="botones">
+            <button onclick="calcularEsfera()">Calcular</button>
+            <button onclick="limpiar('esfera')">Limpiar</button>
+        </div>
+
+        <p id="resultado-esfera" class="resultado"></p>
+    </div>
+
+    <!-- 3.- Conversión de Pesos a Dólares -->
+    <div id="seccion-divisas" class="seccion" style="display:none;">
+        <h2>Conversión de Pesos a Dólares</h2>
+
+        <label for="pesos">Cantidad en pesos:</label>
+        <input type="number" id="pesos" placeholder="Ej: 500">
+
+        <label for="tipoCambio">Tasa de cambio:</label>
+        <input type="number" id="tipoCambio" placeholder="Ej: 17.50" step="0.01">
+
+        <div class="botones">
+            <button onclick="calcularDivisas()">Convertir</button>
+            <button onclick="limpiar('divisas')">Limpiar</button>
+        </div>
+
+        <p id="resultado-divisas" class="resultado"></p>
+    </div>
+
+    <!-- Muestra el último cálculo guardado en localStorage -->
+    <hr>
+    <p id="ultimo-calculo"></p>
+
+    <!-- Enlace al archivo script -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+/* Fuente de la página */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Los inputs ocupan todo el ancho disponible */
+input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 4px;
+    padding: 4px;
+}
+
+/* Separación entre los botones de acción */
+.botones {
+    margin-top: 12px;
+}
+
+.botones button {
+    margin-right: 8px;
+}
+
+/* Párrafo donde aparece el resultado */
+.resultado {
+    margin-top: 10px;
+}
+
+/* Estilo para mensajes de error */
+.error {
+    color: red;
+}
